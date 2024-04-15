@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.AddNoteFragment"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_note"
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:padding="6dp"/>
+            <EditText
+                android:id="@+id/addNote_Title_Et"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/title"
+                android:padding="6dp"
+                android:elevation="2dp"
+                android:textSize="20sp"
+               />
+
+        <EditText
+            android:id="@+id/addNote_Content_Et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:elevation="2dp"
+            android:gravity="top"
+            android:hint="@string/type_your_note"
+            android:padding="6dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+</layout>
