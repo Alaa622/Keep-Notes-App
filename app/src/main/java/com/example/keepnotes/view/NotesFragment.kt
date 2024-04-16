@@ -80,7 +80,7 @@ class NotesFragment : Fragment(R.layout.fragment_notes) {
                 if (newText != null) {
                     activity.let {
                         noteViewModel.searchNote("%$newText").observe(viewLifecycleOwner) {
-                            noteAdapter.notes = it
+                            noteAdapter.setNotes(it)
                         }
                     }
                 }
@@ -111,7 +111,7 @@ class NotesFragment : Fragment(R.layout.fragment_notes) {
 
         activity.let {
             noteViewModel.getAllNotes().observe(viewLifecycleOwner) { notes ->
-                noteAdapter.notes = notes
+                noteAdapter.setNotes(notes)
                 updateUI(notes)
             }
 

@@ -19,7 +19,7 @@ import com.example.keepnotes.model.Note
 import com.example.keepnotes.view.NotesFragmentDirections
 
 class NoteAdapter() : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
-    var notes = listOf<Note>()
+    private var notes = listOf<Note>()
     lateinit var noteViewHolder: NoteViewHolder
 
     class NoteViewHolder(private val binding: ItemNoteBinding) :
@@ -61,6 +61,10 @@ class NoteAdapter() : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     fun getItem(): Note {
         return notes[noteViewHolder.adapterPosition]
+    }
+
+    fun setNotes(notes:List<Note>){
+        this.notes=notes
     }
 
 }
