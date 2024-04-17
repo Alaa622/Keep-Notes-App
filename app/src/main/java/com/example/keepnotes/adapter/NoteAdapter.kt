@@ -30,7 +30,6 @@ class NoteAdapter() : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
             binding.noteTv.text = note.content
 
             binding.root.setOnClickListener(View.OnClickListener {
-                // onItemClickListener.onItemClick(note)
                 it.findNavController().navigate(
                     NotesFragmentDirections.actionNotesFragmentToUpdateNoteFragment(
                         note
@@ -38,8 +37,6 @@ class NoteAdapter() : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
                 )
 
             })
-            binding.root.isLongClickable = true
-
         }
     }
 

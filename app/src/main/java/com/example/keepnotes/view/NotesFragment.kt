@@ -106,12 +106,12 @@ class NotesFragment : Fragment(R.layout.fragment_notes) {
         binding.notesRecyclerView.apply {
             layoutManager = StaggeredGridLayoutManager(2, VERTICAL)
             adapter = noteAdapter
-            noteAdapter.notifyDataSetChanged()
         }
 
         activity.let {
             noteViewModel.getAllNotes().observe(viewLifecycleOwner) { notes ->
                 noteAdapter.setNotes(notes)
+                noteAdapter.notifyDataSetChanged()
                 updateUI(notes)
             }
 
